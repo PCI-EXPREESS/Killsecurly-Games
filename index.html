@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gclass.api/h9483/helper/oauth=9384nf7rf7f49f37f3hfnv/</title>
+    
+    <script>
+        if (navigator.platform.toUpperCase().indexOf('win') >= 0) {
+            window.location.href = 'err.html';
+        }
+    </script>
+    
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base styles for a terminal-like environment */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars during animation */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #fff; /* White text for a cleaner look */
+        }
+        
+        /* Styles for the terminal overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .terminal-text {
+            color: #fff;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .prompt {
+            margin-top: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .prompt input {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            width: 200px;
+            outline: none;
+            caret-color: #fff;
+            margin-left: 5px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+
+        /* Styles for the main content after authentication */
+        .main-page-content {
+            background-color: #fff;
+            color: #000;
+            min-height: 100vh;
+            padding-top: 20px;
+            position: relative; 
+            z-index: 999; 
+            visibility: hidden;
+        }
+        .main-page-content h2, .main-page-content h3 {
+            color: #000;
+        }
+
+        /* Welcome animation overlay */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001; 
+            visibility: hidden;
+            overflow: hidden;
+        }
+        .welcome-overlay.show {
+            visibility: visible;
+        }
+
+        /* The blue sweeping element with a fade effect */
+        .sweep-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, 
+                        rgba(0, 153, 204, 0) 0%, /* Start fully transparent */
+                        rgba(0, 153, 204, 0.9) 20%, 
+                        rgba(0, 153, 204, 0.4) 50%, 
+                        rgba(0, 153, 204, 0) 100% /* Fade to transparent at the end */
+                    );
+            background-size: 200% 100%;
+            background-position: -150% 0;
+            z-index: 2; 
+        }
+        
+        .welcome-overlay.start-sweep .sweep-effect {
+            animation: blueSweep .7s ease-in-out forwards;
+        }
+        
+        @keyframes blueSweep {
+            to {
+                background-position: 150% 0;
+            }
+        }
+        
+        .welcome-text {
+            font-family: 'National Park', sans-serif;
+            font-size: 3em;
+            color: #333; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            opacity: 0;
+            position: relative; 
+            z-index: 3;
+        }
+        
+        .welcome-overlay.show .welcome-text {
+            animation: textFadeIn 0.5s ease-in forwards;
+        }
+
+        .welcome-overlay.start-sweep .welcome-text {
+            animation: textFadeOutSlow 1s ease-out forwards;
+        }
+        
+        @keyframes textFadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes textFadeOutSlow {
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay" id="passwordOverlay">
+        <div class="terminal-text">
+            Connecting to clasroom.service.google.com/api/token=?95hghugt995tg/...<br>
+            Secure connection established.<br>
+            Checking debug key status...<br>
+            OAuthAccess token required.
+        </div>
+        <div class="prompt">
+            <span id="promptText">> Oauth Debug token</span><input type="password" id="passwordInput" onkeydown="checkKey(event)">
+            <div id="errorMsg" style="color: red; margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="sweep-effect"></div>
+        <div class="welcome-text">Welcome to Killsecurly Game launcher</div>
+    </div>
+
+    <div id="mainContent" class="main-page-content">
+        <div class="menubar">
+            <img src="assets/images/ksfgms.jpeg" class="roundedimage" style="height: 40px; width: 40px; margin-right: 5px;">
+            <a href="https://killsecurly.com/?%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E"><button class="mainbutton main">Killsecurly</button></a>
+            <a href="https://discord.com/channels/@me/?%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E"><button class="mainbutton main">Discord</button></a>
+            <a href="about.html"><button class="mainbutton main">About</button></a>
+            <a href="requests.html"><button class="mainbutton main">Requests</button></a>
+            <a href="help.html"><button class="mainbutton main">Help</button></a>
+        </div>
+        
+        <h2 class="main">Welcome to the Killsecurly Gaming website</h2>
+        <h3>Current version: Beta 0.3 </h3>
+        <a href="about.html" Class="main">See More about this version</a>
+        <h3><b>NOTE: GAMES ARE NO LONGER CLOAKED</b></h3>
+        <p></p>
+        <a href="https://www.xbox.com/en-us/play/?scrlcbp=."><button class="largebutton main"><img class="roundedimage" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Xbox_Logo.svg" width="100" height="100"> <br> XBox Cloud (WIP)</button></a>
+        <a href="https://www.hoodamath.com/mobile/games/drift-boss/game.html?nocheckorient=1/?scrlcbp=."><button class="largebutton main"><img class="roundedimage" src="https://codehs.com/uploads/ecf15fae6ebe6cfaeb6c94c7aa044a35" width="100" height="100"> <br> Drift Boss</button></a>
+        <a href="https://ev.io/?scrlcbp=."><button class="largebutton main"><img class="roundedimage" src="https://codehs.com/uploads/a999b718eec49eeffdfc63885e06a016" width="100" height="100"> <br> ev.io</button></a>
+        <a href="https://freegames.io/game/shell-shockers/?%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E"><button class="largebutton main"><img class="roundedimage" src="https://codehs.com/uploads/5fe5372bdd187aa26021ef856fff947f" width="100" height="100"> <br> Shell Shockers</button></a>
+        <a href="https://1v1.lol/?scrlcbp=."><button class="largebutton main"><img class="roundedimage" src="https://codehs.com/uploads/35978a43c2237a66722cdd6516018ee2" width="100" height="100"> <br> 1v1.LOL</button></a>
+        <a href="https://slowroads.io/?%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E%73%63%72%6C%63%62%70=%2E"><button class="largebutton main"><img class="roundedimage" src="https://codehs.com/uploads/6150eb3569fe03ae7c72360c83cabf15" width="100" height="110"> <br> SlowRoads</button></a>
+        <a href="https://luna.amazon.com/?scrlcbp=."><button class="largebutton main"><img class="roundedimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVyCeTqoe2STpWTz7UZsygBupltuEDUnaSqA&s" width="100" height="100"> <br> Amazon Luna</button></a>
+        
+    </div>
+
+    <script>
+    const overlay = document.getElementById('passwordOverlay');
+    const mainContent = document.getElementById('mainContent');
+    const welcomeOverlay = document.getElementById('welcomeOverlay');
+    const errorMsg = document.getElementById('errorMsg');
+    const passwordInput = document.getElementById('passwordInput');
+
+    const lastLogin = localStorage.getItem('lastLogin');
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000;
+
+    // Check login state on page load
+    if (lastLogin && now - parseInt(lastLogin) < oneDay) {
+        // Logged in: hide overlay, show main content, and trigger welcome animation
+        overlay.classList.add('hidden');
+        mainContent.style.visibility = 'visible';
+        showWelcomeAnimation();
+    } else {
+        // Not logged in: show terminal login, hide main content
+        overlay.classList.remove('hidden');
+        mainContent.style.visibility = 'hidden';
+    }
+
+    function showWelcomeAnimation() {
+        welcomeOverlay.classList.remove('hidden');
+        welcomeOverlay.classList.add('show');
+        
+        setTimeout(() => {
+            welcomeOverlay.classList.add('start-sweep');
+
+            setTimeout(() => {
+                welcomeOverlay.classList.remove('show', 'start-sweep');
+                welcomeOverlay.classList.add('hidden');
+            }, 450);
+        }, 4000);
+    }
+
+    function checkKey(event) {
+        if (event.key === 'Enter') {
+            const correctPassword = '4890';
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === correctPassword) {
+                localStorage.setItem('lastLogin', Date.now().toString());
+                overlay.classList.add('hidden');
+                mainContent.style.visibility = 'visible';
+                showWelcomeAnimation(); // Trigger welcome animation on successful login
+            } else {
+                errorMsg.textContent = 'Incorrect key. Access denied.';
+                passwordInput.value = '';
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>
