@@ -1,0 +1,126 @@
+.headers{
+    font-family: "National Park", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.main{
+
+  font-family: "National Park", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(0,0,0);
+}
+.hovertext{
+    transition:400ms;
+}
+embed {
+            flex-grow: 1;     
+            width: 100%;      
+            height: 100%;     
+}
+html, body {
+            height: 100%; 
+            margin: 0;     
+            overflow: hidden; 
+}
+
+
+.hovertext:hover{
+    
+    font-family: "National Park", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color:rgb(0,0,0);
+    transition:300ms;
+}
+.mainbutton{
+    border:none;
+    border-radius:5px;
+    height:40px;
+    width:80px;
+    background-color:rgb(190,200,255);
+    margin-right:5px;
+    margin-left:5px;
+    transition:200ms;
+    box-shadow:1px 2px 2px gray;
+    
+}
+.mainbutton:hover{
+    height:30px;
+    width:60px;
+    background-color:rgb(195,215,255) ;
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-right:15px;
+    margin-left:15px;
+    font-size:12px;
+    box-shadow:2.5px 3.5px 3.5px gray;
+}
+.menubar{
+    background-color:rgb(210,230,255) ;
+    border-radius:15px;
+    padding:15px;
+    display:flex;
+    flex-direction:row;
+    box-shadow:2px 3px 3px gray;
+}
+
+.space{
+    margin-top:5px;
+    margin bottom:5px;
+    margin-right:5px;
+    margin-left:5px;
+}
+.largebutton{
+    border:none;
+    border-radius:5px;
+    height:175px;
+    width:125px;
+    background-color:rgb(190,200,255);
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:5px;
+    margin-bottom:5px;
+    transition:200ms;
+}
+.largebutton:hover{
+    height:160px;
+    width:115px;
+    background-color:rgb(195,215,255) ;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:20px;
+    margin-left:20px;
+    font-size:15px;
+    box-shadow:2px 3px 3px gray;
+    
+}
+.roundedimage{
+    border-radius:5px;
+    box-shadow:1px 2px 2px gray;
+    
+    
+}
+.longbutton{
+    border:none;
+    border-radius:5px;
+    height:40px;
+    width:250px;
+    background-color:rgb(190,200,255);
+    margin-right:10px;
+    margin-left:10px;
+    transition:200ms;
+}
+.longbutton:hover{
+    height:35px;
+    width:225px;
+    background-color:rgb(195,215,255) ;
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-right:22.5px;
+    margin-left:22.5px;
+    font-size:20px;
+    box-shadow:2px 3px 3px gray;
+}
